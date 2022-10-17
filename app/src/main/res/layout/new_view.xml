@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- this layout is used to add a new view for each new added shoes
+        instead of manually adding each text view inside the
+        code(dynamically). 'layout' tag is for the binding and
+        'linear layout' is easier for arranging the text views
+        together vertically. -->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="shoe"
+            type="com.example.shoe_store.ShoeData" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_margin"
+        android:layout_marginBottom="@dimen/medium_margin"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/shoe_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@{@string/shoe_name_data(shoe.ShoeName)}"
+            android:textColor="@color/purple_700"
+            android:layout_marginTop="@dimen/small_margin"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            tools:text="Shoe Name" />
+
+        <TextView
+            android:id="@+id/shoe_company"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{@string/shoe_company_data(shoe.ShoeCompany)}"
+            android:textColor="@color/purple_700"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:layout_marginTop="@dimen/small_margin"
+            tools:text="Shoe Company" />
+
+        <TextView
+            android:id="@+id/shoe_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{@string/shoe_size_data(shoe.ShoeSize)}"
+            android:textColor="@color/purple_700"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:layout_marginTop="@dimen/small_margin"
+            tools:text="Shoe Size" />
+
+        <TextView
+            android:id="@+id/shoe_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{@string/shoe_description_data(shoe.ShoeDescription)}"
+            android:textColor="@color/purple_700"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:layout_marginTop="@dimen/small_margin"
+            tools:text="Shoe Description" />
+
+
+    </LinearLayout>
+
+</layout>

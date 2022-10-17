@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--used 'linear layout' since there is only two views that can be arranged
+        vertically so there was no need to use 'constraint layout' and
+        complicate the design-->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.shoeList.InstructionsOnboardingFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/medium_margin"
+        android:layout_marginRight="@dimen/medium_margin"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/roboto"
+            android:text="@string/instructions"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/purple_700"
+            android:textSize="@dimen/mediumText"
+            android:textStyle="bold" />
+
+        <TextView
+            style="@style/TextViews"
+            android:layout_marginTop="@dimen/large_margin"
+            android:text="@string/instructions_text"
+            android:textAlignment="center" />
+
+        <Button
+            android:id="@+id/instructions_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/large_margin"
+            android:fontFamily="@font/roboto"
+            android:text="@string/instructions_button"
+            android:textColor="@color/white"
+            android:textSize="@dimen/mediumText"
+            android:textStyle="bold" />
+    </LinearLayout>
+</layout>
